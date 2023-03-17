@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 02fc6f983744acf4dab89c9bbed4b165
+guid: 4ca76729965d6a547865e25e40b4d92a
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: MAT.HumanCapsule.Capsule
-    second: {fileID: 2100000, guid: b3a82b21b6042da4aa151a4a797f8741, type: 2}
+    second: {fileID: 2100000, guid: 2ad376cecef048a4e9a4f1cdea5c060a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
