@@ -95,8 +95,9 @@ namespace pdox.RBPC
         private Vector2 m_MoveInput;
         private Vector2 m_LookInput, m_PreviousLookInput;
         private float m_LookRotationX, m_LookRotationY;
-        [SerializeField]
-        PickUpController m_PickUpController;
+        [SerializeField] PickUpController m_PickUpController;
+       
+        [SerializeField] DoorRayCast m_DoorRayCast;
 
         #endregion
 
@@ -117,6 +118,8 @@ namespace pdox.RBPC
         public void OnFire(CallbackContext a_Context)
         {
            m_PickUpController.SendMessage("PickUpInput");
+          
+           m_DoorRayCast.SendMessage("PlayAnimation");
         }
 
         //* Called for Left Ctrl or Gamepad West Button
@@ -193,6 +196,14 @@ namespace pdox.RBPC
         //* Awake is called when the script instance is being loaded
         private void Awake()
         {
+            
+    
+        
+             // Locks the cursor
+            Cursor.lockState = CursorLockMode.Locked;
+            
+
+
             //* Set the current speed to the walk speed
             m_CurrentSpeed = m_WalkSpeed;
 
@@ -374,13 +385,14 @@ namespace pdox.RBPC
         {
             if (m_IsCrouching)
             {
+                Debug.Log("Crouching");
                 m_Collider.height = m_CrouchHeight;
 
                 //* Move the collider down to match the new height
                 Vector3 l_ColliderCenter = m_Collider.center;
                 l_ColliderCenter.y = m_CrouchHeight * 0.5f;
                 m_Collider.center = l_ColliderCenter;
-
+                m_CameraHolderTransform.localPosition = new Vector3(0, m_Collider.height, 0);
             }
 
             else
@@ -402,6 +414,7 @@ namespace pdox.RBPC
                     Vector3 l_ColliderCenter = m_Collider.center;
                     l_ColliderCenter.y = m_PlayerHeight * 0.5f;
                     m_Collider.center = l_ColliderCenter;
+                    m_CameraHolderTransform.localPosition = new Vector3(0, m_Collider.height, -0.1f);
                     return;
                 }
 
@@ -440,6 +453,7 @@ namespace pdox.RBPC
                 Vector3 l_ColliderCenter2 = m_Collider.center;
                 l_ColliderCenter2.y = m_Collider.height * 0.5f;
                 m_Collider.center = l_ColliderCenter2;
+                m_CameraHolderTransform.localPosition = new Vector3(0, m_Collider.height, -0.1f);
             }
         }
 

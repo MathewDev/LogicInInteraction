@@ -10,8 +10,9 @@ public class PickUpController : MonoBehaviour
    private Rigidbody m_heldObjRB;
 
     [Header("Physics Parameters")]
-    [SerializeField] private float m_pickupRange = 5.0f;
+    [SerializeField] private float m_pickupRange = 1.0f;
     [SerializeField] private float m_pickupForce = 150.0f;
+    [SerializeField] LayerMask m_InteractableLayerMask;
     private void Update()
     {
        
@@ -26,7 +27,7 @@ public class PickUpController : MonoBehaviour
         if(m_heldObj == null) 
             {
                 RaycastHit hit;
-                if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, m_pickupRange))
+                if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, m_pickupRange, m_InteractableLayerMask))
                 {
                     PickupObject(hit.transform.gameObject);
                 }
