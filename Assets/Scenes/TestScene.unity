@@ -7480,7 +7480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 747941435}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.162, y: 1.1, z: -1.478}
+  m_LocalPosition: {x: 1.162, y: 1.1, z: -1.378}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11500,7 +11500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634796081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.162, y: 1.5, z: -11.478}
+  m_LocalPosition: {x: 1.162, y: 1.5, z: -11.378}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11928,13 +11928,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114335955, guid: 15840494b1ea9244eab2d31ea4124990, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 339155060, guid: 15840494b1ea9244eab2d31ea4124990, type: 3}
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 339155061, guid: 15840494b1ea9244eab2d31ea4124990, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 479706826, guid: 15840494b1ea9244eab2d31ea4124990, type: 3}
       propertyPath: m_Layer
@@ -12088,7 +12092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_holdArea: {fileID: 2111230023}
   m_pickupRange: 2
-  m_pickupForce: 150
+  m_pickupForce: 80
   m_InteractableLayerMask:
     serializedVersion: 2
     m_Bits: 64

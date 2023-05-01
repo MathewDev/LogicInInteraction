@@ -11,7 +11,7 @@ public class PickUpController : MonoBehaviour
 
     [Header("Physics Parameters")]
     [SerializeField] private float m_pickupRange = 1.0f;
-    [SerializeField] private float m_pickupForce = 150.0f;
+    [SerializeField] private float m_pickupForce = 80.0f;
     [SerializeField] LayerMask m_InteractableLayerMask;
     private void Update()
     {

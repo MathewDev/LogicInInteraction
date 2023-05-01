@@ -365,7 +365,7 @@ namespace pdox.RBPC
 
             //* Rotate the camera around the X axis
             m_LookRotationX += m_LookInput.y * m_RotationSpeedMultiplier;
-            m_LookRotationX = Mathf.Clamp(m_LookRotationX, -90.0f, 90.0f);
+            m_LookRotationX = Mathf.Clamp(m_LookRotationX, -70.0f, 90.0f);
             m_CameraHolderTransform.localRotation = Quaternion.Euler(-m_LookRotationX, 0.0f, 0.0f);
         }
 
