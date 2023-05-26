@@ -2343,7 +2343,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-104976
+  m_Name: pb_Mesh55010
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2582,7 +2582,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-104984
+  m_Name: pb_Mesh55330
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6184,7 +6184,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-153656
+  m_Name: pb_Mesh55144
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9499,7 +9499,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-104980
+  m_Name: pb_Mesh55310
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11218,7 +11218,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-104978
+  m_Name: pb_Mesh55452
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11414,6 +11414,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &756573314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20054,6 +20055,26 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: -3774817144781890782, guid: d0ce42b95a83bf143b289cf148c73e41, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3774817144781890782, guid: d0ce42b95a83bf143b289cf148c73e41, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3774817144781890782, guid: d0ce42b95a83bf143b289cf148c73e41, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3774817144781890782, guid: d0ce42b95a83bf143b289cf148c73e41, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3774817144781890782, guid: d0ce42b95a83bf143b289cf148c73e41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -2943593993946404721, guid: d0ce42b95a83bf143b289cf148c73e41, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -20096,6 +20117,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0ce42b95a83bf143b289cf148c73e41, type: 3}
+--- !u!1 &1343982597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 428857546729109491, guid: d0ce42b95a83bf143b289cf148c73e41, type: 3}
+  m_PrefabInstance: {fileID: 1343982596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1343982598
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343982597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 740bd4d3d0eda0045ad00f13304d7961, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1370211809 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca1c13bb0a36e0a458bf089ce02651e1, type: 3}
@@ -24097,7 +24144,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-134492
+  m_Name: pb_Mesh55070
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24314,6 +24361,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1804405192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24928,7 +24976,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-104982
+  m_Name: pb_Mesh55278
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
