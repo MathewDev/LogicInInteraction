@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CupboardClose
+  m_Name: DoorClose2
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: aaa3ceecff021864abb557ea2c9dda70, type: 2}
+  m_Motion: {fileID: 7400000, guid: c45d01c483c8de84e9567a6f26a5348a, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -33,7 +33,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cupboard_Model
+  m_Name: Door_Model 2
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: IsOpen
@@ -101,7 +101,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 40, y: 50, z: 0}
-  m_EntryPosition: {x: 40, y: 110, z: 0}
+  m_EntryPosition: {x: 40, y: 100, z: 0}
   m_ExitPosition: {x: 40, y: 150, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -4311196778077292417}
@@ -137,7 +137,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CupboardOpen
+  m_Name: DoorOpen2
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -151,7 +151,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 65ff06f23462bc6479903866a31fa60d, type: 2}
+  m_Motion: {fileID: 7400000, guid: fa9d398fb41ff414bbbd21f4339ed44e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
