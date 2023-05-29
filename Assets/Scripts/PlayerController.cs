@@ -66,6 +66,7 @@ namespace pdox.RBPC
 
         [Space]
         [Header("Jump Settings")]
+        [SerializeField] private LayerMask m_GroundLayerMask;
         [Tooltip("Player Jump Force Multiplier")][SerializeField] private float m_JumpForceMultiplier = 1f;
         [Tooltip("Coyote Time in Seconds")][SerializeField] private float m_CoyoteTime = 0.1f;
         [Tooltip("Jump Honor Buffer Time in Seconds")][SerializeField] private float m_JumpHonorBufferTime = 0.1f;
@@ -501,40 +502,35 @@ namespace pdox.RBPC
             m_CurrentCamera = a_CameraNew;
         }
 
-        private void GroundCheck(out bool a_Grounded, out Quaternion a_GroundSlope)
+        private void GroundCheck(out bool r_IsGrounded, out Quaternion r_GroundSlope)
         {
-            a_GroundSlope = Quaternion.identity;
-            a_Grounded = false;
+            //* Create a blank quaternion for the ground slope
+            r_GroundSlope = Quaternion.identity;
 
             //* Ground Check using sphere cast
             //* GOTCHA: If a collider is detected at the start of the sphere cast, then the hit info will have no normal direction, thats why we start the cast inside the player and move down
-            RaycastHit[] l_Hits = Physics.SphereCastAll(transform.position + m_GroundCheckPositionOffset, m_GroundCheckRadius, Vector3.down, m_GroundCheckDistance);
 
-            //* If there is no collider, then the player is not grounded
-            if (l_Hits.Length < 1)
-            {
-                return;
-            }
+            RaycastHit[] l_Hits = new RaycastHit[8];
+            int l_HitCount = Physics.SphereCastNonAlloc(transform.position + m_GroundCheckPositionOffset, m_GroundCheckRadius, Vector3.down, l_Hits, m_GroundCheckDistance, m_GroundLayerMask);
 
-            //* If there is a collider, then check if it is the player
-            foreach (RaycastHit a_Hit in l_Hits)
+            r_IsGrounded = false;
+
+            for (int i = 0; i < l_HitCount; i++)
             {
-                if (a_Hit.transform.gameObject != this.transform.gameObject)
+                if (l_Hits[i].transform.gameObject == this.transform.gameObject)
+                    continue;
+
+                r_IsGrounded = true;
+
+                //* Get the normal of the ground
+                Vector3 l_GroundNormal = m_Rigidbody.transform.InverseTransformDirection(l_Hits[i].normal);
+                float l_GroundAngle = Vector3.Angle(l_GroundNormal, Vector3.up);
+                if (l_GroundAngle != 0)
                 {
-                    a_Grounded = true;
-
-                    //* Get the normal of the ground
-                    Vector3 l_GroundNormal = m_Rigidbody.transform.InverseTransformDirection(a_Hit.normal);
-                    float l_GroundAngle = Vector3.Angle(l_GroundNormal, Vector3.up);
-                    if (l_GroundAngle != 0)
-                    {
-                        Quaternion l_SlopeAngleRotation = Quaternion.FromToRotation(Vector3.up, l_GroundNormal);
-                        a_GroundSlope = l_SlopeAngleRotation;
-                    }
-                    return;
+                    r_GroundSlope = Quaternion.FromToRotation(Vector3.up, l_GroundNormal);
                 }
+                break;
             }
-            return;
         }
 
         private void JumpTimers()
